@@ -19,6 +19,9 @@ spring:
           issuer-uri: https://dissertationuaa.eu.auth0.com/
   cloud:
     gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: true
       routes:
         - id: dbapp
           uri: lb://dbapp
